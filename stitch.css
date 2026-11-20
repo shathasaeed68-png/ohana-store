@@ -1,0 +1,932 @@
+/* إعدادات الصفحة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fbf1f4;
+    color: #5d5b5b;
+     padding-top: 320px !important; /* لضمان عدم تداخل المحتوى مع الهيدر */
+}
+/* 1. إجبار الهيدر على إظهار صورة ستيتش وتثبيتها */
+header {
+background-image: url('image/wimg.jpg');
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 250px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    z-index: 9998 !important;
+}
+header h2 {
+    color: #e58bb5;
+}
+/* 2. إجبار شريط الروابط على الاصطفاف أفقياً بجانب بعضه تماماً */
+nav {
+    position: fixed !important;
+    top: 250px !important;
+    left: 0 !important;
+    width: 100% !important;
+    background-color: #ffffff !important;
+    padding: 10px 0 !important;
+    border-top: 1px solid #f5d9e8 !important;
+    z-index: 9999 !important;
+}
+nav ul {
+    display: flex !important;
+    flex-direction: row !important;  /* يمنع الكلمات من النزول تحت بعضها ويجعلها أفقية */
+    justify-content: center !important;
+    align-items: center !important;
+    list-style: none !important;
+    gap: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* عناصر القائمة */
+nav ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* الروابط */
+nav a {
+    text-decoration: none;
+    color: #51445a;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #398bb2;
+}
+/* تنسيقات محتوى البودي (Main Content) */
+.main-content {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+/* 1. قسم البانر الترحيبي Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 100%);
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.hero-section h2 {
+  color: #2b529a;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.btn-shop {
+  display: inline-block;
+  background-color: #e72d6e;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+.btn-shop:hover {
+  background-color: #f778a7;
+  transform: scale(1.05);
+}
+footer {
+  background: linear-gradient(135deg, #81c4d9 0%, #ffdeff 100%);
+  color: #ffffff;
+  padding: 40px 20px 15px;
+  border-top: 4px solid;
+  border-image: linear-gradient(to right, hsl(218, 51%, 85%), #ffc4fc) 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* 2. اللوجو / العنوان الرئيسي */
+.footer-logo h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #093db6; /* لون ستيتش الأزرق */
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* 3. حاوية الأقسام الرئيسية */
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+/* 4. قسم "من نحن" (About Us) */
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+/*لون كلمه نبذه*/
+.footer-section h4 {
+  color: #140395;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 5px;
+}
+/*خط فاصل*/
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #545ef0;
+}
+.footer-section p {
+  color: #ef78db;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+/* 5. قسم "تواصل معنا" (Contact us) */
+.footer-content {
+  flex: 1;
+  min-width: 220px;
+}
+/*لون كلمه كونكت*/
+.footer-content h4 {
+  color: #072d85; /* لون ستيتش الأزرق */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 5px;
+}
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-content ul li {
+  margin-bottom: 8px;
+}
+/* لون الاستفسارالاساسي */
+.footer-content ul li a {
+  color: #878ca8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+/* لون الاستفسار يتغير لما يجي الماوس عليه */
+.footer-content ul li a:hover {
+  color: #e63286;
+  padding-right: 6px;
+}
+/* لون الحقوق */
+.footer-bottom p {
+  color: #2442b8;
+  font-size: 0.85rem;
+}
+/* قسم الأقسام الرئيسية (Category-First) */
+.categories-section {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px dashed #ef88ab;
+}
+.categories-section h2 {
+    color: #0288d1;
+    margin-bottom: 20px;
+}
+.category-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.cat-card {
+    background-color: white;
+    color: #0288d1;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    border: 2px solid #0288d1;
+    transition: 0.3s;
+}
+.cat-card:hover {
+    background-color: #ec407a;
+    color: white;
+    border-color: #ec407a;
+    transform: translateY(-3px);
+}
+/* تنسيق أقسام المنتجات */
+.product-category {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.product-category h3 {
+    color: #ec407a;
+    border-bottom: 2px solid #0288d1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 2px solid #f8bbd0;
+    transition: 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(2, 136, 209, 0.2);
+}
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.product-card h4 {
+    margin: 10px 0 5px;
+    color: #0288d1;
+}
+.price {
+    color: #ec407a;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.product-card button {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+.product-card button:hover {
+    background-color: #ec407a;
+}
+/* تنسيق صور المنتجات لتكون قابلة للنقر */
+.product-card img {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card img:hover {
+    opacity: 0.8;
+}
+
+/* نافذة تكبير الصورة المنبثقة (Modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: #ff69b4;
+}
+/* 1. الحاوية الرئيسية (Wrapper) التي تجمع وتورّث الخصائص الأساسية */
+.contact-wrapper {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(245, 217, 232, 0.4);
+    border: 2px solid #f5d9e8;
+    font-family: Arial, sans-serif;
+    color: #51445a;
+    box-sizing: border-box;
+}
+/* 2. وراثة التنسيقات للعناوين والنصوص داخل الإطار */
+.contact-wrapper h1 {
+    color: #4a3b5c;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.contact-wrapper p {
+    color: inherit; /* يورث لون النص من الحاوية الأم */
+    opacity: 0.85;
+    text-align: center;
+    margin-bottom: 25px;
+}
+/* 3. تنسيق نموذج الإدخال (Form) داخل الإطار */
+.contact-wrapper form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: inherit;
+}
+.contact-wrapper input[type="text"],
+.contact-wrapper input[type="email"],
+.contact-wrapper textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1.5px solid #e8d0df;
+    border-radius: 10px;
+    background-color: #faf5f8;
+    font-size: 14px;
+    color: inherit;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.contact-wrapper textarea {
+    height: 120px;
+    resize: vertical;
+}
+/* 4. تأثير التركيز عند الكتابة inside Input */
+.contact-wrapper input:focus, 
+.contact-wrapper textarea:focus {
+    border-color: #b5839c;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(181, 131, 156, 0.25);
+}
+/* 5. زر الإرسال (Submit Button) */
+.contact-wrapper button, 
+.contact-wrapper input[type="submit"] {
+    width: 100%;
+    background-color: #b5839c;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-wrapper button:hover, 
+.contact-wrapper input[type="submit"]:hover {
+    background-color: #9c6c84;
+}
+/* 6. إطار معلومات الاتصال الموروث في الأسفل */
+.contact-info-card {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff9fc;
+    border-radius: 12px;
+    border: 1px dashed #d4a5be;
+    text-align: center;
+}
+.contact-info-card h3 {
+    color: #4a3b5c;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.contact-info-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.container {
+    width: 85%;
+    margin: 45px auto;
+}
+/* زر السلة العائم (يمكنك تعديل مكانه ليوافق الهيدر لديك) */
+.cart-floating-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #4a90e2, #ff7eb3);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: transform 0.2s;
+}
+
+.cart-floating-btn:hover {
+    transform: scale(1.05);
+}
+
+/* القائمة الجانبية للسلة */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    left: -380px; /* مخفية خارج الشاشة */
+    width: 350px;
+    max-width: 90%;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    direction: rtl;
+}
+
+.cart-sidebar.open {
+    left: 0; /* تظهر عند الفتح */
+}
+
+.cart-header {
+    background: linear-gradient(135deg, #4a90e2, #7aa8e8);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8faff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-right: 4px solid #4a90e2;
+}
+
+.cart-item-info h5 {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    color: #313030;
+}
+
+.cart-item-info span {
+    font-size: 13px;
+    color: #666;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qty-btn {
+    background: #e1ecf9;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.remove-btn {
+    background: #ffe3e8;
+    border: none;
+    color: #e53e3e;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cart-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+.total-box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2d3748;
+}
+
+.checkout-btn, .clear-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.checkout-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.checkout-btn:hover {
+    background-color: #357abd;
+}
+
+.clear-btn {
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+
+/* الرسالة التفاعلية (Toast) */
+.toast {
+    visibility: hidden;
+    min-width: 260px;
+    background-color: #2d3748;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 14px 20px;
+    position: fixed;
+    z-index: 1001;
+    bottom: 80px;
+    left: 20px;
+    font-size: 15px;
+    box-shadow: 0 5px 15px rgba(62, 62, 62, 0.2);
+    border-right: 5px solid #e36097;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* نافذة تكبير الصورة (Modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.17);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* خلفية النافذة المنبثقة */
+#image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* شكل البطاقة الحاضنة للصورة من الداخل */
+#image-modal .modal-content, #image-modal .modal-card {
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+/* تنسيق الصورة داخل البطاقة عشان ما تتشوه */
+#modal-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain; /* تمنع مد الصورة أو تشوهها وتطلع بشكلها الطبيعي النظيف */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+/* =========================================
+   تنسيقات صفحة تسجيل الدخول (Login Page)
+   ========================================= */
+.login-wrapper {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(2, 136, 209, 0.12);
+    border: 2px solid #f8bbd0;
+    color: #51445a;
+}
+
+.login-wrapper h1 {
+    color: #0288d1;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.login-wrapper p {
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.login-wrapper form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #2b529a;
+}
+
+.login-wrapper input[type="text"],
+.login-wrapper input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1.5px solid #e8d0df;
+    border-radius: 12px;
+    background-color: #faf5f8;
+    font-size: 14px;
+    color: #51445a;
+    transition: all 0.3s ease;
+}
+
+.login-wrapper input:focus {
+    border-color: #0288d1;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(2, 136, 209, 0.2);
+}
+
+/* خيارات تذكرني ونسيت كلمة المرور */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.login-options .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    cursor: pointer;
+    color: #5d5b5b;
+    font-weight: normal;
+}
+
+.login-options .forgot-pass {
+    color: #ec407a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-options .forgot-pass:hover {
+    color: #0288d1;
+    text-decoration: underline;
+}
+
+/* زر تسجيل الدخول */
+.login-wrapper button {
+    width: 100%;
+    background: linear-gradient(135deg, #0288d1, #4a90e2);
+    color: #ffffff;
+    border: none;
+    padding: 13px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.login-wrapper button:hover {
+    background: linear-gradient(135deg, #ec407a, #f778a7);
+    transform: scale(1.02);
+}
+
+/* بطاقة إنشاء حساب في الأسفل */
+.login-footer-card {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #fff9fc;
+    border-radius: 12px;
+    border: 1px dashed #ef88ab;
+    text-align: center;
+}
+
+.login-footer-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #51445a;
+}
+
+.login-footer-card a {
+    color: #0288d1;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-footer-card a:hover {
+    color: #ec407a;
+}
+/* تنسيق عنوان "طرق الدفع" */
+.cart-footer h3 {
+    font-size: 17px;
+    color: #1e293b;
+    margin: 20px 0 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* تحويل حاوية خيارات الدفع إلى شبكة بطاقات متجاورة */
+.cart-footer .form-group:has(input[type="radio"]#card) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* تصميم كل خيار دفع كبطاقة مستقلة */
+.cart-footer .radio-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 10px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* تأثير عند تمرير الماوس */
+.cart-footer .radio-group:hover {
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(59, 130, 246, 0.1);
+}
+
+/* تمييز البطاقة المختارة بتدرج لوني وتوهج أنيق */
+.cart-footer .radio-group:has(input[type="radio"]:checked) {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-color: #2563eb;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
+}
+
+/* تنسيق زر الاختيار (Radio) والنص */
+.cart-footer .radio-group input[type="radio"] {
+    accent-color: #2563eb;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.cart-footer .radio-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cart-footer .radio-group:has(input[type="radio"]:checked) label {
+    color: #1d4ed8;
+}
+
+/* ==========================================
+   ✨ ميزة إظهار وإخفاء خانة رقم البطاقة تلقائياً
+   ================================---------- */
+
+/* 1. إخفاء حقل رقم البطاقة افتراضياً */
+.cart-footer .form-group:has(input[type="text"]) {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition: all 0.35s ease-in-out;
+}
+
+/* 2. إظهار حقل رقم البطاقة بسلاسة فقط عند اختيار البطاقة الائتمانية */
+.cart-footer:has(#card:checked) .form-group:has(input[type="text"]) {
+    max-height: 120px;
+    opacity: 1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+/* تنسيق حقل إدخال رقم البطاقة نفسه */
+.cart-footer .form-group input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    background: #f8fafc;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* تنسيق التسمية (Label) الخاصة برقم البطاقة */
+.cart-footer .form-group:has(input[type="text"]) label {
+    display: block;
+    font-size: 13px;
+    color: #1e293b;
+    margin-bottom: 6px;
+    font-weight: 600;
+    text-align: right;
+}

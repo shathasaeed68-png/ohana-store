@@ -1,0 +1,109 @@
+<head> <link rel="stylesheet" href="stitch.css">
+        <div class="category-links">
+            <a href="clothes.html" class="cat-card"> الملابس</a>
+            <a href="school.html" class="cat-card">الأدوات المدرسية</a>
+            <a href="mugs.html" class="cat-card"> الأكواب</a>
+            <a href="plushies.html" class="cat-card"> الدباديب</a>
+            <a href="accessories.html" class="cat-card"> الكماليات</a>
+            <script src="script.js"></script>
+        </div>
+    </head>
+<body>
+    <header> </header>
+    <!-- قسم الأقسام الرئيسية -->
+    <section id="categories" class="categories-section">
+        <h2>تصفح أقسام المتجر</h2>
+        <nav class="fixed-nav">
+            <ul>
+                <li><a href="index.html">Ohana stitch</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html"> Shopping Cart</a></li>
+                <li><a href="login.html">log in</a></li>
+            </ul>
+        </nav>
+    <section id="school" class="product-category">
+            <h3>📚 قسم الأدوات المدرسية</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="image/sc1.jpeg" alt="أدوات 1" onclick="openModal(this.src)">
+                    <h4>دفتر ملاحظات ستيتش</h4>
+                    <p class="price">25 ريال</p>
+                    <button class="add-to-cart" data-name="دفتر ملاحظات ستيتش" data-price="25">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sc3.jpeg" alt="أدوات 2" onclick="openModal(this.src)">
+                    <h4>مقلمة ستيتش المدرسية</h4>
+                    <p class="price">35 ريال</p>
+                    <button class="add-to-cart" data-name="مقلمة ستيتش المدرسية" data-price="35">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sc2..jpeg" alt="أدوات 3" onclick="openModal(this.src)">
+                    <h4>مساطر ستيتش</h4>
+                    <p class="price">20 ريال</p>
+                    <button class="add-to-cart" data-name="مساطر ستيتش" data-price="20">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sc4.jpeg" alt="أدوات 4" onclick="openModal(this.src)">
+                    <h4>اقلام ستيتش &انجل</h4>
+                    <p class="price">15 ريال</p>
+                    <button class="add-to-cart" data-name="اقلام ستيتش &انجل" data-price="15">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sc5.jpeg" alt="أدوات 5" onclick="openModal(this.src)">
+                    <h4>مذكرة ستيتش</h4>
+                    <p class="price">30 ريال</p>
+                    <button class="add-to-cart" data-name="مذكرة ستيتش" data-price="30">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sc6.jpeg" alt="أدوات 6" onclick="openModal(this.src)">
+                    <h4>مذكرات ستيتش فرو</h4>
+                    <p class="price">40 ريال</p>
+                    <button class="add-to-cart" data-name="مذكرات ستيتش فرو" data-price="40">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/sc7.jpeg" alt="أدوات 6" onclick="openModal(this.src)">
+                    <h4>فواصل كتب</h4>
+                    <p class="price">10 ريال</p>
+                    <button class="add-to-cart" data-name="فواصل كتب" data-price="10">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/bag3.jpeg" alt="أدوات 6" onclick="openModal(this.src)">
+                    <h4>توت باق ستيتش</h4>
+                    <p class="price">60 ريال</p>
+                    <button class="add-to-cart" data-name="توت باق ستيتش" data-price="60">أضف للسلة</button>
+                </div>
+            </div>
+        </section>
+        <!-- الرسالة التفاعلية عند الإضافة للسلة -->
+<div id="toast-notification" class="toast"></div>
+
+<!-- نافذة تكبير الصورة -->
+<div id="image-modal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+<!-- ربط ملف الجافاسكريبت -->
+<script src="script.js"></script>
+</body>
+        <footer>
+    <div class="footer-logo">
+        <h3>🩵Ohana stitch🩵 </h3>
+    </div>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>كل مايخص عائله ستيتش هنا</p>
+        </div>
+    <div class="footer-content">
+        <h4>Contact us:</h4>
+        <ul>
+        <li><a href="contact.html">للتواصل والاستفسار </a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة &copy; 2027 Ohana stitch</p>
+    </div>
+</footer>
+
+</body>

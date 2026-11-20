@@ -1,0 +1,87 @@
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="stitch.css">
+</head>
+<body>
+    <header> </header>
+    <!-- قسم الأقسام الرئيسية -->
+    <section id="categories" class="categories-section">
+        <nav class="fixed-nav">
+            <ul>
+                <li><a href="index.html">Ohana stitch</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html"> Shopping Cart</a></li>
+                <li><a href="login.html">log in</a></li>
+            </ul>
+        </nav>
+    <section class="cart-page-container" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+        <h2>سلة المشتريات 🛍️</h2>
+
+        <!-- هنا ستظهر المنتجات التي أضافها العميل -->
+        <div id="cart-items" class="cart-items"></div>
+
+        <!-- ملخص السعر والأزرار -->
+        <div class="cart-footer" style="margin-top: 20px; border-radius: 10px;">
+            <div class="total-box">
+                <span>الإجمالي الكلي:</span>
+                <span id="cart-total">0 ريال</span>
+            </div>
+            <h3>طرق الدفع (اختر طريقة الدفع المناسبة)</h3>
+            <div class="form-group">
+                <div class="radio-group">
+                    <input type="radio" name="payment" id="card" checked>
+                    <label for="card">البطاقة الائتمانية / مدى</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="payment" id="transfer">
+                    <label for="transfer">تحويل بنكي</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="payment" id="cash">
+                    <label for="cash">الدفع عند الاستلام (كاش)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>رقم البطاقة</label>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+            </div>
+            <button class="checkout-btn" onclick="checkout()">إتمام الطلب</button>
+            <button class="clear-btn" onclick="clearCart()">إفراغ السلة</button>
+            <a href="products.html" style="display:block; text-align:center; margin-top:15px; color:#6ca1dd; text-decoration:none;">← متابعة التسوق</a>
+        </div>
+        <!-- الرسالة التفاعلية -->
+    <div id="toast-notification" class="toast"></div>
+    <!-- نافذة إتمام الطلب المخصصة -->
+<div id="custom-alert-modal" class="modal">
+    <div class="custom-alert-content" style="background: white; padding: 25px; border-radius: 15px; text-align: center; max-width: 400px; width: 90%; box-shadow: 0 5px 20px rgba(0,0,0,0.2); direction: rtl;">
+        <h3 style="color: #4a90e2; margin-bottom: 15px;">شكراً لتسوقك من متجر Ohana stitch 🩷💙</h3>
+        <p id="custom-alert-text" style="font-size: 16px; color: #333; margin-bottom: 20px;"></p>
+        <button onclick="closeCustomAlert()" style="background: linear-gradient(135deg, #4a90e2, #ff7eb3); color: white; border: none; padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer;">حسناً</button>
+    </div>
+</div>
+    </section>
+</body>
+
+<footer>
+    <div class="footer-logo">
+        <h3>🩵Ohana stitch🩵 </h3>
+    </div>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>كل مايخص عائله ستيتش هنا</p>
+        </div>
+    <div class="footer-content">
+        <h4>Contact us:</h4>
+        <ul>
+        <li><a href="contact.html">للتواصل والاستفسار </a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة &copy; 2027 Ohana stitch</p>
+    </div>
+</footer>
+</body>
+
+</html>

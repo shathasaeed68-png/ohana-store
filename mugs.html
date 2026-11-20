@@ -1,0 +1,107 @@
+<head>
+    <link rel="stylesheet" href="stitch.css">
+        <div class="category-links">
+            <a href="clothes.html" class="cat-card"> الملابس</a>
+            <a href="school.html" class="cat-card">الأدوات المدرسية</a>
+            <a href="mugs.html" class="cat-card"> الأكواب</a>
+            <a href="plushies.html" class="cat-card"> الدباديب</a>
+            <a href="accessories.html" class="cat-card"> الكماليات</a>
+            <script src="script.js"></script>
+        </div>
+    </head>
+<body>
+    <header> </header>
+    <!-- قسم الأقسام الرئيسية -->
+    <section id="categories" class="categories-section">
+        <h2>تصفح أقسام المتجر</h2>
+        <nav class="fixed-nav">
+            <ul>
+                <li><a href="index.html">Ohana stitch</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html"> Shopping Cart</a></li>
+                <li><a href="login.html">log in</a></li>
+            </ul>
+        </nav>
+    <section id="mugs" class="product-category">
+            <h3>☕ قسم الأكواب</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="image/mug1.jpeg" alt="كوب 1" onclick="openModal(this.src)">
+                    <h4>كوب سيراميك انجل</h4>
+                    <p class="price">45 ريال</p>
+                    <button class="add-to-cart" data-name="كوب سيراميك انجل" data-price="45">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/mug2.jpeg" alt="كوب 2" onclick="openModal(this.src)">
+                    <h4>فناجين كوبل ستيتش &انجل</h4>
+                    <p class="price">60 ريال</p>
+                    <button class="add-to-cart" data-name="فناجين كوبل ستيتش &انجل" data-price="60">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/mug3.jpeg" alt="كوب 3" onclick="openModal(this.src)">
+                    <h4>كوبين سيراميك انجل&ستيتش</h4>
+                    <p class="price">100 ريال</p>
+                    <button class="add-to-cart" data-name="كوبين سيراميك انجل&ستيتش" data-price="100">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/mug4.jpeg" alt="كوب 4" onclick="openModal(this.src)">
+                    <h4>مق ستيتش&انجل</h4>
+                    <p class="price">65 ريال</p>
+                    <button class="add-to-cart" data-name="مق ستيتش&انجل" data-price="65    ">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/mug5.jpeg" alt="كوب 5" onclick="openModal(this.src)">
+                    <h4>مق ستيتش الازرق</h4>
+                    <p class="price">50 ريال</p>
+                    <button class="add-to-cart" data-name="مق ستيتش الازرق" data-price="50  ">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/mug6.jpeg" alt="كوب 6" onclick="openModal(this.src)">
+                    <h4>كوب ستيتش بغطاء ستيتش</h4>
+                    <p class="price">48 ريال</p>
+                    <button class="add-to-cart" data-name="كوب ستيتش بغطاء ستيتش" data-price="48">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/mug7.jpeg" alt="كوب 6" onclick="openModal(this.src)">
+                    <h4>كوب ستيتش المميز</h4>
+                    <p class="price">60 ريال</p>
+                    <button class="add-to-cart" data-name="كوب ستيتش المميز" data-price="60">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/mug8.jpeg" alt="كوب 6" onclick="openModal(this.src)">
+                    <h4>كوب ستيتش الازرق</h4>
+                    <p class="price">43 ريال</p>
+                    <button class="add-to-cart" data-name="كوب ستيتش الازرق" data-price="43">أضف للسلة</button>
+                </div>
+            </div>
+                <!-- الرسالة التفاعلية عند الإضافة للسلة -->
+<div id="toast-notification" class="toast"></div>
+
+<!-- نافذة تكبير الصورة -->
+<div id="image-modal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+        </section>
+
+</body>
+        <footer>
+    <div class="footer-logo">
+        <h3>🩵Ohana stitch🩵 </h3>
+    </div>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>كل مايخص عائله ستيتش هنا</p>
+        </div>
+    <div class="footer-content">
+        <h4>Contact us:</h4>
+        <ul>
+        <li><a href="contact.html">للتواصل والاستفسار </a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة &copy; 2027 Ohana stitch</p>
+    </div>
+</footer>
+</body>

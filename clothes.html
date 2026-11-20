@@ -1,0 +1,113 @@
+<head>
+    <link rel="stylesheet" href="stitch.css">
+        <div class="category-links">
+            <a href="clothes.html" class="cat-card"> الملابس</a>
+            <a href="school.html" class="cat-card">الأدوات المدرسية</a>
+            <a href="mugs.html" class="cat-card"> الأكواب</a>
+            <a href="plushies.html" class="cat-card"> الدباديب</a>
+            <a href="accessories.html" class="cat-card"> الكماليات</a>
+            <script src="script.js"></script>
+        </div>
+</head>
+<body>
+    <header> </header>
+    <!-- قسم الأقسام الرئيسية -->
+    <section id="categories" class="categories-section">
+        <h2>تصفح أقسام المتجر</h2>
+        <nav class="fixed-nav">
+            <ul>
+                <li><a href="index.html">Ohana stitch</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html"> Shopping Cart</a></li>
+                <li><a href="login.html">log in</a></li>
+            </ul>
+        </nav>
+</section>
+    <!-- قسم المنتجات والتفاصيل -->
+    <main id="products">
+        <!-- قسم الملابس -->
+        <section id="clothes" class="product-category">
+            <h3> قسم الملابس</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="image/cloths 1.jpeg" alt="ملابس 1" onclick="openModal(this.src)">
+                    <h4>تيشيرت ستيتش الازرق</h4>
+                    <p class="price">75 ريال</p>
+                    <button class="add-to-cart" data-name="تيشيرت ستيتش الازرق" data-price="75">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/cloths2.jpeg" alt="ملابس 2" onclick="openModal(this.src)">
+                    <h4>تيشيرت ستيتش & انجل</h4>
+                    <p class="price">95 ريال</p>
+                    <button class="add-to-cart" data-name="تيشيرت ستيتش &انجل" data-price="95 ">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/cloths3.jpeg" alt="ملابس 3" onclick="openModal(this.src)">
+                    <h4>طقم بيجامة ستيتش</h4>
+                    <p class="price">110 ريال</p>
+                    <button class="add-to-cart" data-name="طقم بيجامة ستيتش" data-price="110">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/cloths4.jpeg" alt="ملابس 4" onclick="openModal(this.src)">
+                    <h4>قميص ستيتش كيوت</h4>
+                    <p class="price">80 ريال</p>
+                    <button class="add-to-cart" data-name="قميص ستيتش كيوت" data-price="80">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/cloths5.jpeg" alt="ملابس 5" onclick="openModal(this.src)">
+                    <h4>بلوفر انجل الوردي </h4>
+                    <p class="price">100 ريال</p>
+                    <button class="add-to-cart" data-name="بلوفر انجل الوردي" data-price="100">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/BLO1.jpeg" alt="ملابس 6" onclick="openModal(this.src)">
+                    <h4>بلوفر ستيتش</h4>
+                    <p class="price">130 ريال</p>
+                    <button class="add-to-cart" data-name="بلوفر ستيتش" data-price="130">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/pij.jpeg" alt="ملابس 6" onclick="openModal(this.src)">
+                    <h4>بيجامة ستيتش </h4>
+                    <p class="price">60 ريال</p>
+                    <button class="add-to-cart" data-name="بيجامة ستيتش" data-price="60">أضف للسلة</button>
+                </div>
+                <div class="product-card">
+                    <img src="image/cl.jpeg" alt="ملابس 6" onclick="openModal(this.src)">
+                    <h4>طقم شتوي فرو ناعم</h4>
+                    <p class="price">110 ريال</p>
+                    <button class="add-to-cart" data-name="طقم شتوي فرو ناعم" data-price="110">أضف للسلة</button>
+                </div>
+            </div>
+        </section>
+        <!-- الرسالة التفاعلية عند الإضافة للسلة -->
+<div id="toast-notification" class="toast"></div>
+
+<!-- نافذة تكبير الصورة -->
+<div id="image-modal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+<!-- ربط ملف الجافاسكريبت -->
+<script src="script.js"></script>
+</body>
+<footer>
+    <div class="footer-logo">
+        <h3>🩵Ohana stitch🩵 </h3>
+    </div>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>كل مايخص عائله ستيتش هنا</p>
+        </div>
+    <div class="footer-content">
+        <h4>Contact us:</h4>
+        <ul>
+        <li><a href="contact.html">للتواصل والاستفسار </a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة &copy; 2027 Ohana stitch</p>
+    </div>
+</footer>
+</body>

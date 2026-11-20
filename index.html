@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohana stitch store</title>
+    <link rel="stylesheet" href="stitch.css">
+    <script src="script.js"></script>
+    <style>
+    /* === تنسيقات خاصة بالواجهة الرئيسية فقط === */
+    .ohana-hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 35px 40px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 30px;
+        border: 2px solid #e1effa;
+        box-shadow: 0 15px 35px rgba(110, 193, 228, 0.15);
+        gap: 30px;
+        flex-wrap: wrap;
+        font-family: Tahoma, sans-serif;
+    }
+
+    /* قسم النصوص والزر */
+    .ohana-hero-text {
+        flex: 1;
+        min-width: 280px;
+        text-align: right;
+        animation: fadeInUp 0.9s ease-out forwards;
+    }
+
+    .ohana-hero-text h1 {
+        color: #2b5b84;
+        font-size: 32px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .ohana-hero-text p {
+        color: #556270;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    /* زر تسوق الآن التفاعلي */
+    .ohana-cta-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #5da9e9, #ff8fab);
+        color: white;
+        padding: 14px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 8px 20px rgba(255, 143, 171, 0.35);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ohana-cta-btn:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 12px 25px rgba(93, 169, 233, 0.45);
+    }
+
+    /* صندوق الصورة مع الحفاظ على خلفيتها الأصلية وإطار أنيق */
+    .ohana-hero-image-box {
+        flex: 1;
+        min-width: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ohana-image-frame {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 25px;
+        border: 2px solid #f0dede;
+        box-shadow: 0 10px 25px rgba(244, 143, 177, 0.15);
+        /* تطبيق أنيميشن الطفو المستمر على الإطار بالكامل مع الصورة */
+        animation: floatStitch 3.5s ease-in-out infinite;
+        transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    .ohana-image-frame img {
+        width: 100%;
+        max-width: 300px; /* مقاس متناسق وثابت */
+        height: auto;
+        display: block;
+        border-radius: 15px;
+        object-fit: contain;
+    }
+
+    /* حالة مرور الماوس على إطار الصورة (Hover State) */
+    .ohana-image-frame:hover {
+        animation-play-state: paused; /* إيقاف الطفو بلطف عند وضع الماوس */
+        transform: scale(1.04) rotate(1deg);
+        border-color: #ff8fab;
+    }
+
+    /* === تعريف حركات الأنيميشن (Keyframes) === */
+    @keyframes floatStitch {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-12px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+</head>
+<header class="fixed-header">
+<nav class="fixed-nav">
+            <ul>
+                <li><a href="index.html">Ohana stitch</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html"> Shopping Cart</a></li>
+                <li><a href="login.html">log in</a></li>
+            </ul>
+        </nav>
+</header>
+<body>
+<section class="ohana-hero-section">
+    <!-- العمود الأول: العبارة التسويقية وزر تسوق الآن -->
+    <div class="ohana-hero-text">
+        <h1>لأن أوهانا تعني العائلة.. اكتشفي عالمكِ اللطيف معنا 💙🌸</h1>
+        <p>مساحتكِ الخاصة لكل ما يبهج القلب من تصاميم مستوحاة من ستيتش وآنجل، صُممت بحب لترافقكِ في كل تفاصيل يومك.</p>
+        <a href="products.html" class="ohana-cta-btn">ابدئي رحلتكِ الآن ✨</a>
+    </div>
+
+    <!-- العمود الثاني: الصورة بخلفيتها الأصلية داخل إطار أنيق متحرك -->
+    <div class="ohana-hero-image-box">
+        <div class="ohana-image-frame">
+            <!-- ضعي مسار صورتكِ هنا مكان stitch.png -->
+            <img src="image/pic1.jpeg" alt="Ohana Stitch">
+        </div>
+    </div>
+</section>
+</body>
+<footer>
+    <div class="footer-logo">
+        <h3>🩵Ohana stitch🩵 </h3>
+    </div>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>كل مايخص عائله ستيتش هنا</p>
+        </div>
+    <div class="footer-content">
+        <h4>Contact us:</h4>
+        <ul>
+        <li><a href="contact.html">للتواصل والاستفسار </a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة &copy; 2027 Ohana stitch</p>
+    </div>
+</footer>
+</html>
